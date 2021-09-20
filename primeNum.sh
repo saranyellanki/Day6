@@ -7,15 +7,13 @@ then
 	echo $num is not a valid input
 fi
 ans=0
-for ((i=2; i<$num; i++))
+
+for ((j=$i; j<$num; j++))
 do
-	for ((j=$i; j<$num; j++))
-	do
-		if [ $((num%j)) == 0 ]
-		then
-			ans=1
-		fi
-	done
+	if [ $((num%j)) == 0 ]
+	then
+		ans=1
+	fi
 done
 if [ $ans == 1 ]
 then
