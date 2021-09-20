@@ -8,7 +8,7 @@ then
 fi
 ans=0
 
-for ((j=$i; j<$num; j++))
+for ((j=2; j<$num; j++))
 do
 	if [ $((num%j)) == 0 ]
 	then
