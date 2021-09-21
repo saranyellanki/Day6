@@ -6,19 +6,19 @@ echo "Enter the last number of the range"
 read n
 
 
-for a in $(seq $m $n)
+for i in $(seq $m $n)
 do
-    k=0
-    for i in $(seq 2 $((a - 1)))
+    ans=0
+    for j in $(seq 2 $((i - 1)))
     do 
-        if [ $((a % i)) -eq 0 ]
+        if [ $((i % j)) -eq 0 ]
         then
-            k=1
+            ans=1
             break
         fi
     done
-    if [ $k -eq 0 ]
+    if [ $ans -eq 0 ]
     then
-    echo $a
+    echo $i
     fi
 done
